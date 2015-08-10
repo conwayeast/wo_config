@@ -68,7 +68,10 @@ $table_prefix  = 'wp_';
 /**
  * For developers: WordPress debugging mode.
  *
+ * View database errors and get warnings about using deprecated functions or files
+ *
  * Change this to true to enable the display of notices during development.
+ *
  * It is strongly recommended that plugin and theme developers use WP_DEBUG
  * in their development environments.
  *
@@ -92,59 +95,78 @@ require_once(ABSPATH . 'wp-settings.php');
 
 
 /*
-* 
-* Override the site URL and WordPress path usually set in the database (in the wp_options table) 
-* using the General Settings page. You can use WP_SITEURL to set the site's URL directly.
-* 
-* define('WP_SITEURL', 'http://mydomain.com/blog/');
-*
-*/
+ * 
+ * Override the site URL and WordPress path usually set in the database (in the wp_options table) 
+ * using the General Settings page. You can use WP_SITEURL to set the site's URL directly.
+ * 
+ * define('WP_SITEURL', 'http://mydomain.com/blog/');
+ *
+ */
 
 
 /*
-* 
-* Define the path to the WordPress install using WP_HOME
-* 
-* define('WP_HOME', 'http://mydomain.com/wp/');
-*
-*/
+ * 
+ * Define the path to the WordPress install using WP_HOME
+ * 
+ * define('WP_HOME', 'http://mydomain.com/wp/');
+ *
+ */
 
 
 /*
-* 
-* Define where the wp-content folder is located
-* No trailing slash
-* 
-* define('WP_CONTENT_URL', 'http://mydomain.com/files/wp-content');
-*
-*/
+ * 
+ * Define where the wp-content folder is located
+ * No trailing slash
+ * 
+ * define('WP_CONTENT_URL', 'http://mydomain.com/files/wp-content');
+ *
+ */
 
 /*
-* 
-* Disable post revisions
-*
-* define( 'WP_POST_REVISIONS', false );
-*
-*/
-
-
-/*
-* 
-* Save up to certain # of post revisions
-*
-* define( 'WP_POST_REVISIONS', 5 );
-*
-*/
+ * 
+ * Disable post revisions
+ *
+ * define( 'WP_POST_REVISIONS', false);
+ *
+ */
 
 
 /*
-* 
-* Change the frequency at which autosaves occur
-* default is 60 seconds
-*
-* define( 'AUTOSAVE_INTERVAL', 180 );
-*
-*/
+ * 
+ * Save up to certain # of post revisions
+ *
+ * define( 'WP_POST_REVISIONS', 5 );
+ *
+ */
+
+
+/*
+ * 
+ * Change the frequency at which autosaves occur
+ * default is 60 seconds
+ *
+ * define( 'AUTOSAVE_INTERVAL', 180 );
+ *
+ */
+
+
+/*
+ * 
+ * Users with an administrator account can edit theme and plugin files from within the WordPress admin interface.
+ * This is a potential problem should a malicious user gain access to an administrator account, turn it off.
+ *
+ * define( 'DISALLOW_FILE_EDIT', true);
+ *
+ */
+
+
+/*
+ * 
+ * Enable network support and multisite
+ *
+ * define( 'WP_ALLOW_MULTISITE', true);
+ *
+ */
 
 
 
